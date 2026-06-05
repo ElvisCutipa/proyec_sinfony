@@ -8,6 +8,11 @@
     </head>
     <body>
         <nav>
+        {% for message in app.flashes('success') %}
+    <div style="background: #00ffcc; color: #000; padding: 10px; margin-bottom: 15px; border-radius: 4px;">
+        {{ message }}
+    </div>
+    {% endfor %}
             <span>USFA - Symfony</span>
             <a href="/">Inicio</a>
         </nav>
