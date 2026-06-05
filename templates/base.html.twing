@@ -2,20 +2,14 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Perfil Universitario Symfony{% endblock %}</title>
-        <style>
-            * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-            body { background-color: #121212; color: #e0e0e0; }
-            nav { background-color: #1e1e1e; padding: 1rem; display: flex; gap: 20px; border-bottom: 2px solid #00ffcc; }
-            nav a { color: #b0b0b0; text-decoration: none; }
-            nav a:hover { color: #00ffcc; }
-            .container { max-width: 1000px; margin: 40px auto; padding: 20px; background: #1e1e1e; border-radius: 8px; }
-        </style>
+        <title>{% block title %}Perfil Universitario{% endblock %}</title>
+        {# Enlazamos el CSS global desde la carpeta public #}
+        <link rel="stylesheet" href="{{ asset('css/global.css') }}">
     </head>
     <body>
         <nav>
-            <span style="color: #00ffcc; font-weight: bold; margin-right: 20px;">USFA - Symfony</span>
-            <a href="{{ path('inicio') }}">Inicio</a>
+            <span>USFA - Symfony</span>
+            <a href="/">Inicio</a>
         </nav>
         <div class="container">
             {% block body %}{% endblock %}
